@@ -12,7 +12,6 @@
 		72ECD1C518FC520100BDF24F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ECD1B518FC520100BDF24F /* Foundation.framework */; };
 		72ECD1C718FC520100BDF24F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ECD1C618FC520100BDF24F /* UIKit.framework */; };
 		72ECD1CA18FC520100BDF24F /* libmobcrush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ECD1B218FC520100BDF24F /* libmobcrush.a */; };
-		72ECD1DC18FC522100BDF24F /* libmobcrushminima.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ECD1DB18FC522100BDF24F /* libmobcrushminima.a */; };
 		72ECFE4018FC52CC00BDF24F /* AudioMixer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72ECFDF818FC52C900BDF24F /* AudioMixer.cpp */; };
 		72ECFE4118FC52CC00BDF24F /* GenericAudioMixer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72ECFDFA18FC52C900BDF24F /* GenericAudioMixer.cpp */; };
 		72ECFE4218FC52CC00BDF24F /* GLESVideoMixer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 72ECFE0018FC52CA00BDF24F /* GLESVideoMixer.mm */; };
@@ -27,6 +26,7 @@
 		72ECFE4B18FC52CC00BDF24F /* AACPacketizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72ECFE2818FC52CB00BDF24F /* AACPacketizer.cpp */; };
 		72ECFE4C18FC52CC00BDF24F /* H264Packetizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72ECFE2A18FC52CB00BDF24F /* H264Packetizer.cpp */; };
 		72ECFE4D18FC52CC00BDF24F /* Split.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72ECFE2C18FC52CB00BDF24F /* Split.cpp */; };
+		72ECFEA418FC5D0C00BDF24F /* libminima.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ECFEA318FC5D0C00BDF24F /* libminima.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,6 @@
 		72ECD1C218FC520100BDF24F /* mobcrushTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mobcrushTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72ECD1C318FC520100BDF24F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		72ECD1C618FC520100BDF24F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		72ECD1DB18FC522100BDF24F /* libmobcrushminima.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmobcrushminima.a; sourceTree = "<group>"; };
 		72ECD1DD18FC524200BDF24F /* MCConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCConstants.h; sourceTree = "<group>"; };
 		72ECD1DE18FC524200BDF24F /* MobCrush_c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobCrush_c.h; sourceTree = "<group>"; };
 		72ECD1DF18FC524200BDF24F /* MobCrush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobCrush.h; sourceTree = "<group>"; };
@@ -102,6 +101,7 @@
 		72ECFE2B18FC52CB00BDF24F /* H264Packetizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = H264Packetizer.h; sourceTree = "<group>"; };
 		72ECFE2C18FC52CB00BDF24F /* Split.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Split.cpp; sourceTree = "<group>"; };
 		72ECFE2D18FC52CB00BDF24F /* Split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Split.h; sourceTree = "<group>"; };
+		72ECFEA318FC5D0C00BDF24F /* libminima.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libminima.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +109,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72ECFEA418FC5D0C00BDF24F /* libminima.a in Frameworks */,
 				72ECD1B618FC520100BDF24F /* Foundation.framework in Frameworks */,
-				72ECD1DC18FC522100BDF24F /* libmobcrushminima.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,10 +160,10 @@
 		72ECD1B718FC520100BDF24F /* mobcrush */ = {
 			isa = PBXGroup;
 			children = (
+				72ECFEA318FC5D0C00BDF24F /* libminima.a */,
 				72ECD1DD18FC524200BDF24F /* MCConstants.h */,
 				72ECD1DE18FC524200BDF24F /* MobCrush_c.h */,
 				72ECD1DF18FC524200BDF24F /* MobCrush.h */,
-				72ECD1DB18FC522100BDF24F /* libmobcrushminima.a */,
 			);
 			path = mobcrush;
 			sourceTree = "<group>";
@@ -529,7 +529,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/mobcrush",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -555,7 +558,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/mobcrush",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -616,6 +622,7 @@
 				72ECD1D718FC520100BDF24F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		72ECD1D818FC520100BDF24F /* Build configuration list for PBXNativeTarget "mobcrushTests" */ = {
 			isa = XCConfigurationList;
@@ -624,6 +631,7 @@
 				72ECD1DA18FC520100BDF24F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
