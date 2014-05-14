@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A88BCCB192322950086207D /* MicSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A88BCCA192322950086207D /* MicSource.mm */; };
 		72ECD1B618FC520100BDF24F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ECD1B518FC520100BDF24F /* Foundation.framework */; };
 		72ECD1C418FC520100BDF24F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ECD1C318FC520100BDF24F /* XCTest.framework */; };
 		72ECD1C518FC520100BDF24F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ECD1B518FC520100BDF24F /* Foundation.framework */; };
@@ -17,7 +18,6 @@
 		72ECFE4218FC52CC00BDF24F /* GLESVideoMixer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 72ECFE0018FC52CA00BDF24F /* GLESVideoMixer.mm */; };
 		72ECFE4318FC52CC00BDF24F /* RTMPSession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72ECFE0418FC52CA00BDF24F /* RTMPSession.cpp */; };
 		72ECFE4418FC52CC00BDF24F /* CameraSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 72ECFE0A18FC52CA00BDF24F /* CameraSource.mm */; };
-		72ECFE4518FC52CC00BDF24F /* MicSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72ECFE0C18FC52CA00BDF24F /* MicSource.cpp */; };
 		72ECFE4618FC52CC00BDF24F /* StreamSession.mm in Sources */ = {isa = PBXBuildFile; fileRef = 72ECFE1218FC52CA00BDF24F /* StreamSession.mm */; };
 		72ECFE4718FC52CC00BDF24F /* Golomb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72ECFE1718FC52CB00BDF24F /* Golomb.cpp */; };
 		72ECFE4818FC52CC00BDF24F /* MP4Multiplexer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 72ECFE1D18FC52CB00BDF24F /* MP4Multiplexer.mm */; };
@@ -52,6 +52,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1A88BCCA192322950086207D /* MicSource.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MicSource.mm; sourceTree = "<group>"; };
 		72ECD1B218FC520100BDF24F /* libmobcrush.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmobcrush.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		72ECD1B518FC520100BDF24F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		72ECD1C218FC520100BDF24F /* mobcrushTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mobcrushTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,7 +76,6 @@
 		72ECFE0918FC52CA00BDF24F /* CameraSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraSource.h; sourceTree = "<group>"; };
 		72ECFE0A18FC52CA00BDF24F /* CameraSource.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CameraSource.mm; sourceTree = "<group>"; };
 		72ECFE0B18FC52CA00BDF24F /* GLESUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLESUtil.h; sourceTree = "<group>"; };
-		72ECFE0C18FC52CA00BDF24F /* MicSource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MicSource.cpp; sourceTree = "<group>"; };
 		72ECFE0D18FC52CA00BDF24F /* MicSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicSource.h; sourceTree = "<group>"; };
 		72ECFE0E18FC52CA00BDF24F /* ISource.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ISource.hpp; sourceTree = "<group>"; };
 		72ECFE1118FC52CA00BDF24F /* StreamSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamSession.h; sourceTree = "<group>"; };
@@ -235,10 +235,10 @@
 		72ECFE0818FC52CA00BDF24F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				1A88BCCA192322950086207D /* MicSource.mm */,
 				72ECFE0918FC52CA00BDF24F /* CameraSource.h */,
 				72ECFE0A18FC52CA00BDF24F /* CameraSource.mm */,
 				72ECFE0B18FC52CA00BDF24F /* GLESUtil.h */,
-				72ECFE0C18FC52CA00BDF24F /* MicSource.cpp */,
 				72ECFE0D18FC52CA00BDF24F /* MicSource.h */,
 			);
 			path = iOS;
@@ -409,7 +409,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				72ECFE4618FC52CC00BDF24F /* StreamSession.mm in Sources */,
-				72ECFE4518FC52CC00BDF24F /* MicSource.cpp in Sources */,
 				72ECFE4D18FC52CC00BDF24F /* Split.cpp in Sources */,
 				72ECFE4718FC52CC00BDF24F /* Golomb.cpp in Sources */,
 				72ECFE4A18FC52CC00BDF24F /* H264Encode.mm in Sources */,
@@ -417,6 +416,7 @@
 				72ECFE4B18FC52CC00BDF24F /* AACPacketizer.cpp in Sources */,
 				72ECFE4218FC52CC00BDF24F /* GLESVideoMixer.mm in Sources */,
 				72ECFE4018FC52CC00BDF24F /* AudioMixer.cpp in Sources */,
+				1A88BCCB192322950086207D /* MicSource.mm in Sources */,
 				72ECFE4818FC52CC00BDF24F /* MP4Multiplexer.mm in Sources */,
 				72ECFE4C18FC52CC00BDF24F /* H264Packetizer.cpp in Sources */,
 				72ECFE4418FC52CC00BDF24F /* CameraSource.mm in Sources */,
